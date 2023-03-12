@@ -16,19 +16,20 @@
 If you want to run docker as non-root user then you need to add it to the docker group.
 
 1. Create the docker group if it does not exist
+
 $ sudo groupadd docker
 
 
 1. Add your user to the docker group.
-$ sudo usermod -aG docker $USER
+sudo usermod -aG docker $USER
 
 
 1. Log in to the new `docker` group (to avoid having to log out / log in again; but if not enough, try to reboot):
-$ newgrp docker
+newgrp docker
 
 
 1. Check if docker can be run without root
-$ docker run hello-world
+docker run hello-world
 
 
 # Time to run containers in raspberry pi -
